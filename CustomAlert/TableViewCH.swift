@@ -12,9 +12,9 @@ class TableViewCH : UIViewController, UITableViewDelegate, UITableViewDataSource
 {
     @IBOutlet weak var tableView: UITableView!
     
-    let cantonsData = ["AG - Aargau","BE - Bern","GE - Genève","GR -  Graubünden","JU - Jura","LU - Lucern","NE - Neuchâtel","SG - Sankt Gallen","TG - Thurgau","TI - Ticino","UR - Uri","VD - Vaud","VS - Valais","ZH - Zurich","AI - Appenzell \n Innerrhoden","AR - Appenzell \n Ausserrhoden","SH - Schaffhausen","BL - Basel-Landschaft","BS - Basel","SO - Solothurn","FR - Fribourg","ZG - Zug","GL - Glarus","NW - Nidwald","OW - Obwald", "SZ - Schwyz"]
+    let cantonsData = ["AG - Aargau","BE - Bern","GE - Genève","GR -  Graubünden","JU - Jura","LU - Lucern","NE - Neuchâtel","SG - Sankt Gallen","TG - Thurgau","TI - Ticino","UR - Uri","VD - Vaud","VS - Valais","ZH - Zurich","AI - Appenzell \n Innerrhoden","AR - Appenzell \n Ausserrhoden","SH - Schaffhausen","BL - Basel \n Landschaft","BS - Basel","SO - Solothurn","FR - Fribourg","ZG - Zug","GL - Glarus","NW - Nidwald","OW - Obwald", "SZ - Schwyz"]
     
-    let funFact = ["AG - The reconstructed Old High German name of Aargau is Argowe","BE - With over 50 % of the city being green spaces, Bern is Europe's second greenest capital (2019)","GE - You can travel around the city for free","GR -  Graubünden is the largest region in Switzerland, making up 17.2 % of Switzerland’s total land area.","JU - There are simply no traffic lights in the entire canton, with the exception of railway crossings and road works.","LU - Lucern","NE - Neuchâtel","SG - Sankt Gallen","TG - Thurgau","TI - Ticino","UR - Uri","VD - Vaud","VS - Valais","ZH - Zurich","AI - Appenzell Innerrhoden","AR - Appenzell-Ausserrhoden","SH - Schaffhausen","BL - Basel-Landschaft","BS - Basel","SO - Solothurn","FR - Fribourg","ZG - Zug","GL - Glarus","NW - Nidwald","OW - Obwald", "SZ - Schwyz"]
+    let funFact = ["Area (km2): 1404 km2","Area (km2): 5,960 km2","Area (km2): 1,792 km2","GR -  Graubünden is the largest region in Switzerland, making up 17.2 % of Switzerland’s total land area.","JU - There are simply no traffic lights in the entire canton, with the exception of railway crossings and road works.","LU - Lucern","NE - Neuchâtel","SG - Sankt Gallen","TG - Thurgau","TI - Ticino","UR - Uri","VD - Vaud","VS - Valais","ZH - Zurich","AI - Appenzell Innerrhoden","AR - Appenzell-Ausserrhoden","SH - Schaffhausen","BL - Basel-Landschaft","BS - Basel","SO - Solothurn","FR - Fribourg","ZG - Zug","GL - Glarus","NW - Nidwald","OW - Obwald", "SZ - Schwyz"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +39,7 @@ class TableViewCH : UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 140
+        return 180
     }
 }
 
