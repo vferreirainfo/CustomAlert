@@ -1,0 +1,20 @@
+PODS:
+  - Device (3.2.1)
+  - TinyConstraints (4.0.2)
+
+DEPENDENCIES:
+  - Device
+  - TinyConstraints
+
+SPEC REPOS:
+  trunk:
+    - Device
+    - TinyConstraints
+
+SPEC CHECKSUMS:
+  Device: 0738862dd8a30856b4bd9e21cb9b728873d21392
+  TinyConstraints: 7b7ccc0c485bb3bb47082138ff28bc33cd49897f
+
+PODFILE CHECKSUM: 55c2f0a11166a8e1e9efb4295dea754ba9a679ab
+
+COCOAPODS: 1.11.3

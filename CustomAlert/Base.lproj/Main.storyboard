@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ebZ-kV-7jO">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomAlert" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="W9r-wM-QQL">
+                                <rect key="frame" x="40" y="263.5" width="295" height="290"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I8I-qR-xp2">
+                                        <rect key="frame" x="0.0" y="0.0" width="295" height="40"/>
+                                        <color key="backgroundColor" red="0.083722442960000004" green="0.73233264590000002" blue="0.083488200499999998" alpha="0.79989833050000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Success">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onClickSuccess:" destination="BYZ-38-t0r" eventType="touchUpInside" id="77N-RX-jQW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKb-Fe-e2q">
+                                        <rect key="frame" x="0.0" y="50" width="295" height="40"/>
+                                        <color key="backgroundColor" red="0.9352197017766497" green="0.13192038217968238" blue="0.033272990222577598" alpha="0.79989833047945202" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Failure">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onClickFailure:" destination="BYZ-38-t0r" eventType="touchUpInside" id="me9-3T-KIz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K7C-sN-Y2G">
+                                        <rect key="frame" x="0.0" y="100" width="295" height="40"/>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="bolt" catalog="system" title="OHM's LAW (Check voltage)"/>
+                                        <connections>
+                                            <segue destination="3QL-sS-Y0b" kind="show" id="33w-eg-Nir"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bc5-1D-DW9">
+                                        <rect key="frame" x="0.0" y="150" width="295" height="40"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="doc" catalog="system" title="Open PDF" cornerStyle="medium">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                <color key="strokeColor" systemColor="systemRedColor"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="openPDFAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3c8-Qz-DFe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJ2-Ja-Dp5">
+                                        <rect key="frame" x="0.0" y="200" width="295" height="40"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Table View (CH Cantons)" cornerStyle="large">
+                                            <backgroundConfiguration key="background" strokeWidth="3">
+                                                <color key="strokeColor" systemColor="systemRedColor"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="onClicktableViewBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fvl-hi-D3r"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bL-Gh-Xfo">
+                                        <rect key="frame" x="0.0" y="250" width="295" height="40"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system" title="More">
+                                            <backgroundConfiguration key="background" strokeWidth="5">
+                                                <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                                                <color key="strokeColor" red="0.13823807239532471" green="0.93637973070144653" blue="0.43702653050422668" alpha="0.45358587769999997" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom Alert" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vik-gR-c09">
+                                <rect key="frame" x="20" y="74" width="335" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Vik-gR-c09" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="0ZP-ZD-264"/>
+                            <constraint firstItem="Vik-gR-c09" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Eic-k3-5iF"/>
+                            <constraint firstItem="Vik-gR-c09" firstAttribute="centerX" secondItem="W9r-wM-QQL" secondAttribute="centerX" id="NDd-yv-1Xi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="W9r-wM-QQL" secondAttribute="bottom" constant="113.5" id="k8u-I3-0xt"/>
+                            <constraint firstItem="Vik-gR-c09" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ttk-6y-s9R"/>
+                            <constraint firstItem="W9r-wM-QQL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="263.5" id="wtq-7S-5YE"/>
+                            <constraint firstItem="W9r-wM-QQL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="zgG-Az-Flt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="HPR-Ol-uSR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1064.8" y="93.103448275862078"/>
+        </scene>
+        <!--OhmLawVController-->
+        <scene sceneID="pcP-v2-ROG">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="OhmLawV" storyboardName="OhmLawV" referencedIdentifier="OhmLawVController" id="3QL-sS-Y0b" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="dtf-Zc-Wg7"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qbf-j6-7SW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1784" y="77.361319340329842"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vqc-hZ-wB7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ebZ-kV-7jO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vem-pU-wup">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="yUP-Am-N8f"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lAZ-k6-1IF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="125.59999999999999" y="93.103448275862078"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bolt" catalog="system" width="101" height="128"/>
+        <image name="doc" catalog="system" width="115" height="128"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
