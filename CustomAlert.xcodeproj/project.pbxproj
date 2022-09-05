@@ -14,11 +14,13 @@
 		0E42E67621DA873300346711 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E42E67421DA873300346711 /* LaunchScreen.storyboard */; };
 		0E42E67E21DA875400346711 /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E42E67D21DA875400346711 /* AlertView.xib */; };
 		0E42E68021DA896500346711 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E42E67F21DA896500346711 /* AlertView.swift */; };
+		6C06D4D228C2EA9700C0D4E4 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C06D4D128C2EA9700C0D4E4 /* CustomTableViewCell.swift */; };
 		6C0D75C928BD4EFC001F6517 /* OhmLaw.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C0D75C828BD4EFB001F6517 /* OhmLaw.xib */; };
 		6C0D75CB28BD53F0001F6517 /* OhmLaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D75CA28BD53F0001F6517 /* OhmLaw.swift */; };
 		6C0D75CD28BD6B58001F6517 /* ViewTwo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C0D75CC28BD6B58001F6517 /* ViewTwo.xib */; };
 		6C0D75CF28BD7F43001F6517 /* OhmLawV.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C0D75CE28BD7F43001F6517 /* OhmLawV.storyboard */; };
 		6C0D75D128BD801E001F6517 /* OhmLawV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D75D028BD801E001F6517 /* OhmLawV.swift */; };
+		6C62142128C2AAD000401C8F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C62141F28C2AAD000401C8F /* DetailViewController.swift */; };
 		6C952C3C28BFD51F0082B62D /* sample.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6C952C3B28BFD51F0082B62D /* sample.pdf */; };
 		6C952C3E28BFF1C80082B62D /* TableViewCH.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C952C3D28BFF1C80082B62D /* TableViewCH.storyboard */; };
 		6C952C4028BFF1D50082B62D /* TableViewCH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C952C3F28BFF1D50082B62D /* TableViewCH.swift */; };
@@ -38,11 +40,13 @@
 		0E42E67D21DA875400346711 /* AlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
 		0E42E67F21DA896500346711 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		24B0C9D9110086EAAC5B5E50 /* Pods_CustomAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C06D4D128C2EA9700C0D4E4 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		6C0D75C828BD4EFB001F6517 /* OhmLaw.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OhmLaw.xib; sourceTree = "<group>"; };
 		6C0D75CA28BD53F0001F6517 /* OhmLaw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OhmLaw.swift; sourceTree = "<group>"; };
 		6C0D75CC28BD6B58001F6517 /* ViewTwo.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewTwo.xib; sourceTree = SOURCE_ROOT; };
 		6C0D75CE28BD7F43001F6517 /* OhmLawV.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OhmLawV.storyboard; sourceTree = "<group>"; };
 		6C0D75D028BD801E001F6517 /* OhmLawV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OhmLawV.swift; sourceTree = "<group>"; };
+		6C62141F28C2AAD000401C8F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		6C952C3B28BFD51F0082B62D /* sample.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = sample.pdf; sourceTree = "<group>"; };
 		6C952C3D28BFF1C80082B62D /* TableViewCH.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TableViewCH.storyboard; sourceTree = "<group>"; };
 		6C952C3F28BFF1D50082B62D /* TableViewCH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCH.swift; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 				6C0D75C828BD4EFB001F6517 /* OhmLaw.xib */,
 				6C0D75CE28BD7F43001F6517 /* OhmLawV.storyboard */,
 				0E42E67F21DA896500346711 /* AlertView.swift */,
+				6C62141F28C2AAD000401C8F /* DetailViewController.swift */,
+				6C06D4D128C2EA9700C0D4E4 /* CustomTableViewCell.swift */,
 			);
 			path = CustomAlert;
 			sourceTree = "<group>";
@@ -164,7 +170,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 1340;
-				ORGANIZATIONNAME = "SHUBHAM AGARWAL";
+				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					0E42E66721DA873200346711 = {
 						CreatedOnToolsVersion = 9.4;
@@ -259,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C06D4D228C2EA9700C0D4E4 /* CustomTableViewCell.swift in Sources */,
 				0E42E66E21DA873200346711 /* ViewController.swift in Sources */,
 				0E42E66C21DA873200346711 /* AppDelegate.swift in Sources */,
 				0E42E68021DA896500346711 /* AlertView.swift in Sources */,
@@ -266,6 +273,7 @@
 				6C952C4028BFF1D50082B62D /* TableViewCH.swift in Sources */,
 				6CB0D07328C13EFD0091AEAA /* TableViewCell.swift in Sources */,
 				6C0D75CB28BD53F0001F6517 /* OhmLaw.swift in Sources */,
+				6C62142128C2AAD000401C8F /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

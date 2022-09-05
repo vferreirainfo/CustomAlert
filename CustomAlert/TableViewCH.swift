@@ -12,11 +12,9 @@ class TableViewCH : UIViewController, UITableViewDelegate, UITableViewDataSource
 {
     @IBOutlet weak var tableView: UITableView!
     
-    
-    var a = 1
     let cantonsData = ["AG - Aargau","BE - Bern","GE - Genève","GR -  Graubünden","JU - Jura","LU - Lucern","NE - Neuchâtel","SG - Sankt Gallen","TG - Thurgau","TI - Ticino","UR - Uri","VD - Vaud","VS - Valais","ZH - Zurich","AI - Appenzell \n Innerrhoden","AR - Appenzell \n Ausserrhoden","SH - Schaffhausen","BL - Basel \n Landschaft","BS - Basel","SO - Solothurn","FR - Fribourg","ZG - Zug","GL - Glarus","NW - Nidwald","OW - Obwald", "SZ - Schwyz"]
     
-    let funFact = ["Area (km2): 1404 km2","Area (km2): 5,960 km2","Area (km2): 1,792 km2","GR -  Graubünden is the largest region in Switzerland, making up 17.2 % of Switzerland’s total land area.","JU - There are simply no traffic lights in the entire canton, with the exception of railway crossings and road works.","LU - Lucern","NE - Neuchâtel","SG - Sankt Gallen","TG - Thurgau","TI - Ticino","UR - Uri","VD - Vaud","VS - Valais","ZH - Zurich","AI - Appenzell Innerrhoden","AR - Appenzell-Ausserrhoden","SH - Schaffhausen","BL - Basel-Landschaft","BS - Basel","SO - Solothurn","FR - Fribourg","ZG - Zug","GL - Glarus","NW - Nidwald","OW - Obwald", "SZ - Schwyz"]
+    let funFact = ["It has Switzerland’s largest \n research institute for science and engineering.","Bern is considered one \n of the greenest cities in Europe.","You can travel around \n the city for free","Graubünden is the \n largest region in Switzerland","There are simply no \n traffic lights in \n the entire canton","Lake Lucerne was formed as a glacial lake about 12 000 years ago","Lake Neuchâtel is the largest entirely Swiss lake, with a surface area of 217.9 km². ","SG - Sankt Gallen","TG - Thurgau","TI - Ticino","UR - Uri","VD - Vaud","VS - Valais","ZH - Zurich","AI - Appenzell Innerrhoden","AR - Appenzell-Ausserrhoden","SH - Schaffhausen","BL - Basel-Landschaft","BS - Basel","SO - Solothurn","FR - Fribourg","ZG - Zug","GL - Glarus","NW - Nidwald","OW - Obwald", "SZ - Schwyz"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,5 +41,17 @@ class TableViewCH : UIViewController, UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 180
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            let storyboard = UIStoryboard(name: "TableViewCH", bundle: nil)
+            if let vc = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController{
+                vc.img = UIImage(named: cantonsData[indexPath.item])!
+                vc.canton = cantonsData[indexPath.item]
+                let nav = UINavigationController(rootViewController: vc)
+                nav.modalPresentationStyle = .overFullScreen
+                self.present(nav, animated: true)
+            }
+            
+        }
 }
 
