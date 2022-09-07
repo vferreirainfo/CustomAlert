@@ -25,7 +25,11 @@ class TableViewCH : UIViewController, UITableViewDelegate, UITableViewDataSource
         tableView.delegate = self
         
         let nibName = UINib(nibName: "TableViewCell", bundle: nil)
+        
+
         tableView.register(nibName, forCellReuseIdentifier: "tableViewCell")
+        
+                
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cantonsData.count
@@ -53,5 +57,10 @@ class TableViewCH : UIViewController, UITableViewDelegate, UITableViewDataSource
             }
             
         }
+    
+  
+    
 }
+
+
 

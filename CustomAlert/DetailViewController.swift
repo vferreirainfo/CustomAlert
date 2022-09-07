@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import TinyConstraints
+import Device
 
 class DetailViewController: UIViewController {
 
@@ -16,18 +18,16 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var lbl_Name: UILabel!
     @IBOutlet weak var img_View: UIImageView!
    
-    
+
+
     
     
     
     var img = UIImage()
     var canton = ""
     
-    let backButton = UIButton(frame: CGRect(x: 120,
-                                        y: 750,
-                                        width: 150,
-                                        height: 50))
-    
+    let backButton = UIButton()
+    let photoSlideButton = UIButton()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,19 +44,37 @@ class DetailViewController: UIViewController {
         }
         
         showDetailsOfCanton()
-      
+       
 
     }
     
     
     func showDetailsOfCanton()
     {
-        backButton.setTitle("Back to cantons", for: .normal)
-        backButton.backgroundColor = UIColor(red: 58/255, green: 86/255, blue: 230/255, alpha: 0.75)
-        backButton.addTarget(self,
-                         action: #selector(backCantonTBList),
-                         for: .touchUpInside)
-        view.addSubview(backButton)
+        
+        if (Device.size()==Size.screen4Inch || Device.size() >= Size.screen4_7Inch){
+        
+            
+            backButton.frame = CGRect(x:50, y:550, width: 100, height:50)
+            backButton.setTitle("Back", for: .normal)
+            backButton.backgroundColor = UIColor(red: 58/255, green: 86/255, blue: 230/255, alpha: 0.75)
+            backButton.addTarget(self,
+                             action: #selector(backCantonTBList),
+                             for: .touchUpInside)
+            
+            photoSlideButton.frame =  CGRect(x:160, y: 550, width: 140, height:50)
+            photoSlideButton.setTitle("Slidshow", for: .normal)
+            photoSlideButton.backgroundColor = UIColor(red: 58/255, green: 86/255, blue: 230/255, alpha: 0.75)
+            /*backButton.addTarget(self,
+                             action: #selector(backCantonTBList),
+                             for: .touchUpInside)*/
+            view.addSubview(photoSlideButton)
+            view.addSubview(backButton)
+            
+        }
+        
+        //UIButton(frame: CGRect(x:225, y: 750, width: 140, height:50))
+        
         
     }
     
